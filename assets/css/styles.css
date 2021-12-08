@@ -1,29 +1,90 @@
+*, body, html   {
+    margin: 0;
+    padding: 0;
+}
 .container  {
      background: rgba(240, 222, 125, 0.1);
-     font-family: "Helvetica Neue",;
+     font-family: 'Mulish', sans-serif;
+     overflow: hidden;
+}
+
+.container .header  {
+    text-align: center;
+    padding: auto;
+    font-size: 1.5rem;
+    padding-top: 1.0rem;
+    border-bottom: 2rem;
 }
 .wrapper    {
-    width: 100%;
-    display: flex;
-    background: rgba(240, 222, 125, 0.1);
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
     gap: 2rem;
-    flex-wrap: wrap;
+    margin: 0 auto;
     justify-content: space-evenly;
+}
+    @media (max-width: 1024px) {
+    .wrapper {
+        display: grid;
+        gap: 2rem;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr;
+    }
+    .wrapper-item   {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        display: grid;
+        gap: 2rem;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+    }
+    .wrapper-item   {
+        margin: 0 auto;
+    }
 }
 
 .wrapper-item {
     position: relative;
-    width: 30%;
-    background: #fff
+    background: #fff;
+    height: 33rem;
+    margin-bottom: 2rem;
 }
 
+.wrapper-item .social   {
+    padding-left: 1.5rem;
+    padding-bottom: 2rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 0;
+}
+
+.wrapper-item .social span  {
+    color: #000;
+    padding-left: 1.5rem;
+    position: relative;
+    top: -0.5rem;
+}
+.wrapper-item .social span:hover    {
+    color: green;
+}
 .card-details > p   {
     color: rgba(0,0,0,0.5);
     padding-left: 1.5rem;
+    padding-top: 1rem;
 }
 
 .card-details > h3  {
     padding-left: 1.5rem;
+}
+.card-details > ul  {
+    padding-left: 3rem;
+    padding-top: 2.5rem;
 }
 
 .card-img {
@@ -31,7 +92,7 @@
     padding-top: 1.5rem;
 }
 
-img {
+.card-img img {
     width: 114px;
     height: 114px;
     border-radius:50%
@@ -40,3 +101,4 @@ img {
 li  {
     padding-bottom: 1.5rem;
 }
+
